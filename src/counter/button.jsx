@@ -1,4 +1,4 @@
-
+import './counter.css'
 function Buttons(props) {
     const count = props.count;
     const setCount = props.setCount;
@@ -10,8 +10,8 @@ function Buttons(props) {
   }
     return (
         <div>
-            <button onClick={increaseCounter}>+</button>
-            <button onClick={decreaseCounter}>-</button>
+            <button className="btn btn-success me-3 fs-3" onClick={increaseCounter}>+</button>
+            <button className="btn btn-danger fs-3" onClick={decreaseCounter}>-</button>
         </div>
     )
 }
