@@ -13,6 +13,9 @@ function NavBar() {
                 <li className="mx-3 text-capitalize fs-4">
                     <Link to="/counter" className="text-white text-decoration-none">counter</Link>
                 </li>
+                <li className="mx-3 text-capitalize fs-4">
+                    <Link to="/todo" className="text-white text-decoration-none">ToDo List</Link>
+                </li>
             </ul>
         </nav>
     )

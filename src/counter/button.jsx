@@ -1,12 +1,13 @@
+import { incrementAction, decrementAction } from "../redux/count";
+import { useDispatch } from 'react-redux';
 import './counter.css'
-function Buttons(props) {
-    const count = props.count;
-    const setCount = props.setCount;
+function Buttons() {
+    const countDispatch = useDispatch();
     const increaseCounter = () => {
-        setCount(count + 1);
+        countDispatch(incrementAction(1));
     }
     const decreaseCounter = () => {
-        setCount(count -1);    
+           countDispatch(decrementAction(1));
   }
     return (
         <div>
