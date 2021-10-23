@@ -1,5 +1,3 @@
-import { createStore } from 'redux';
-
 const ADD_TODO = "ADD_TODO";
 const REMOVE_TODO = "REMOVE_TODO";
 
@@ -27,12 +25,10 @@ export const addToDoReducer = (state = initialState, action) => {
         case ADD_TODO :
             return { ...state, todoList: [...state.todoList, action.payload] }
         case REMOVE_TODO :
-            return {...state, todoList: [state.todoList,action.payload]}
+            return {...state, todoList: [...state.todoList.filter((item,i)=> i!== action.payload)]}
         default:
             return state
            
     }
     
 }
-//store 
-export const store = createStore(addToDoReducer);
