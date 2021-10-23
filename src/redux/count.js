@@ -1,4 +1,3 @@
-
 const INCREMENT_COUNT = "INCREMENT_COUNT";
 const DECREMENT_COUNT = "DECREMENT_COUNT";
 
@@ -21,15 +20,16 @@ const initialState = {
 }
 
 // reducer 
-export const counterReducer = (state = initialState,action) => {
+export const counterReducer = (state = initialState, action) => {
     switch (action.type) {
         case INCREMENT_COUNT:
             return {...state, count: state.count + action.payload}
         case DECREMENT_COUNT:
             return {...state, count: state.count - action.payload}
         default:
-            return state;
+            return state;     
     }
+   
 }
 
 //store 

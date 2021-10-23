@@ -4,6 +4,8 @@ import Shop from './shop/shop.jsx';
 import Product from './product/product.jsx';
 import Counter from './counter/counter';
 import Todo from './todo/Todo.jsx';
+import Login from './login/login.jsx';
+import Register from './register/register.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -18,7 +20,9 @@ function App() {
           <Route path="/shop" component={Shop} exact/>
           <Route path="/counter" component={Counter} />
           <Route path="/shop/:id" component={Product} />
-          <Route path="/todo" component={Todo}/>
+          <Route path="/todo" component={Todo} />
+          <Route path="/register" component={Register}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </Router>
     </div>

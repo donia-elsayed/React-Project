@@ -4,8 +4,7 @@ import '../todo/Todo.css';
 import { useSelector, useDispatch } from "react-redux";
 import {addToDoAction,removeToDoAction} from '../redux/todo'
 function Todo() {
-  const todoState = useSelector(state => state.todoList);
-  console.log(todoState)
+  const todoState = useSelector(state => state.todos.todoList);
   const dispatchToDo = useDispatch();
   const addTodo = (item) => {
     dispatchToDo(addToDoAction(item));
@@ -13,7 +12,6 @@ function Todo() {
 
   const deleteTodo = (i) => {
     dispatchToDo(removeToDoAction(i));
-    // setTodos(todos.filter((todo,i) => i !== index))
   }
 
   return (

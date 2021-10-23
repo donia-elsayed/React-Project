@@ -16,6 +16,12 @@ function NavBar() {
                 <li className="mx-3 text-capitalize fs-4">
                     <Link to="/todo" className="text-white text-decoration-none">ToDo List</Link>
                 </li>
+                <li className="mx-3 text-capitalize fs-4">
+                    <Link to="/login" className="text-white text-decoration-none">Login</Link>
+                </li>
+                <li className="mx-3 text-capitalize fs-4">
+                    <Link to="/register" className="text-white text-decoration-none">Register</Link>
+                </li>
             </ul>
         </nav>
     )
