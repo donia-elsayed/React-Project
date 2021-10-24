@@ -4,7 +4,7 @@ const FormikErrorMessage = ({ name }) => {
   return (
     <ErrorMessage name={name}>
       {(errMessage) => {
-        return <div style={{ color: "red" }}>{errMessage}</div>;
+        return <div style={{ color: "red",textAlign:"center"}}>{errMessage}</div>;
       }}
     </ErrorMessage>
   );
