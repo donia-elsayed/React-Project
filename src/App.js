@@ -1,4 +1,4 @@
-import NavBar from './navbar/navbar.jsx';
+import NavBar from './shared/navbar/navbar.jsx';
 import Home from './component/home/home.jsx';
 import Shop from './component/shop/shop.jsx';
 import Product from './component/product/product.jsx';

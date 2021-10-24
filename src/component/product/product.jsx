@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Spiner from '../../spiner/spiner';
+import Spiner from '../../shared/spiner/spiner';
 function Product({match}) {
     const [product, setProduct] = useState(null);
     useEffect(() => {

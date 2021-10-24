@@ -5,13 +5,16 @@ function Login() {
         email: "",
         password: "",
         rememberMe: false,
-    }
-    const onSubmit = (values) => console.log(JSON.stringify(values, null, 4));
+    };
+    const onSubmit = (values,{resetForm}) => {
+      alert("Login Successfully");
+      resetForm({values:''});
+    };
     const validationSchema = yup.object({
         email: yup.string().email("Please enter a valid email address")
             .required("Email field is required"),
         password: yup.string().required("Password field is required"),
-    })
+    });
     const formik = useFormik({
         initialValues,
         onSubmit,
@@ -32,7 +35,7 @@ function Login() {
           className="form-control w-75 m-auto"
         />
         {formik.touched.email && formik.errors.email && (
-          <div style={{ color: "red" }}>{formik.errors.email}</div>
+          <div style={{ color: "red",textAlign:"center"}}>{formik.errors.email}</div>
         )}
         </div>
         <div className="mb-3 text-start ps-3">
@@ -47,7 +50,7 @@ function Login() {
           className="form-control w-75 m-auto"
         />
          {formik.touched.password && formik.errors.password && (
-          <div style={{ color: "red" }}>{formik.errors.password}</div>
+          <div style={{ color: "red",textAlign:"center"}}>{formik.errors.password}</div>
         )}
         </div>
         <div className="mb-3 text-start ps-3">
@@ -62,7 +65,7 @@ function Login() {
             className="form-check-input ms-3"
           />
         </div>
-        <button className="btn btn-primary d-block m-auto mt-3 fs-5">Submit</button>
+        <button className="btn btn-primary d-block m-auto mt-3 fs-5" type="submit">Submit</button>
       </div>
     </form>
     )

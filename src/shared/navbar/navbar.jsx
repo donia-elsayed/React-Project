@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 function NavBar() { 
     return (
         <nav className="nav d-flex justify-content-around align-items-baseline bg-primary pt-3">
