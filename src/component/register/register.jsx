@@ -14,7 +14,7 @@ function Register() {
         gender:"",
         hobbies:['']
       };
-      const onSubmit = (values) => console.log(JSON.stringify(values, null, 4));
+      const onSubmit = (values) => alert("Registred Successfully");
       const validationSchema = yup.object({
         userName:yup.string().required("* UserName Field is required"),
         email: yup
@@ -35,15 +35,15 @@ function Register() {
         {(formik) => {
             return (
                 <Form>
-                    <div style={{ padding: 20 }}>
-                        <FormikField label="UserName" name="userName" type="text" />
-                        <FormikField label="Email" name="email" type="email" />
-                        <FormikField label="Password" name="password" type="password" />
-                        <FormikField label="ConfirmPass" name="confirmPassword" type="password" />
-                        <FormikCheckbox label="Active" name="active" type="checkbox"/>
+                    <div className="border my-3 py-3 w-25 m-auto bg-light">
+                        <FormikField label="UserName" name="userName" type="text"/>
+                        <FormikField label="Email" name="email" type="email"/>
+                        <FormikField label="Password" name="password" type="password"/>
+                        <FormikField label="ConfirmPass" name="confirmPassword" type="password"/>
                         <FormikSelect label="Gender" name="gender"/>
+                        <FormikCheckbox label="Active" name="active" type="checkbox"/>
                         <FormikArrayHobbies label="Hobbies" name="hobbies"/>
-                        <button className="btn btn-primary d-block m-auto">submit</button>
+                        <button className="btn btn-primary d-block m-auto mt-4">Submit</button>
                    </div>
               </Form>
             );

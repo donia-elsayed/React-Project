@@ -1,8 +1,8 @@
 import { Field, FieldArray } from "formik";
 function FormikArrayHobbies({name,label}) {
     return (
-        <div className="mb-3">
-        <label htmlFor={name} className="form-label">{label}</label>
+        <div className="text-start px-3">
+        <label htmlFor={name} className="form-label fs-5">{label}</label>
         <FieldArray name={name}>
             {
                 (fieldArrayProps)=>{
@@ -13,10 +13,12 @@ function FormikArrayHobbies({name,label}) {
                         <div>
                         {
                             hobbies.map((hobby,index)=>(
-                                <div key={index} className="mb-3">
-                                    <Field name={`hobbies[${index}]`} className="mb-2 form-control w-25 m-auto"/>
-                                    <button type="button" className="btn btn-danger me-1" onClick={()=>remove(index)}>-</button>
-                                    <button type="button" className="btn btn-success" onClick={()=>push('')}>+</button>
+                                <div key={index} className="mb-2 input-group">
+                                    <Field name={`hobbies[${index}]`} className="form-control w-25 me-2"/>
+                                    <button type="button" className="btn btn-danger me-1 fs-5 text-center" 
+                                    onClick={()=>remove(index)} style={{width:50,padding:5}}>-</button>
+                                    <button type="button" className="btn btn-success fs-5 text-center" 
+                                    onClick={()=>push('')} style={{width:50,padding:5}}>+</button>
                                 </div>
                             ))
                         }

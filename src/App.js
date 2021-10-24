@@ -1,18 +1,18 @@
 import NavBar from './navbar/navbar.jsx';
-import Home from './home/home.jsx';
-import Shop from './shop/shop.jsx';
-import Product from './product/product.jsx';
-import Counter from './counter/counter';
-import Todo from './todo/Todo.jsx';
-import Login from './login/login.jsx';
-import Register from './register/register.jsx';
+import Home from './component/home/home.jsx';
+import Shop from './component/shop/shop.jsx';
+import Product from './component/product/product.jsx';
+import Counter from './component/counter/counter.jsx';
+import Todo from './component/todo/Todo.jsx';
+import Login from './component/login/login.jsx';
+import Register from './component/register/register.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App mt-5 container">
+    <div className="App">
       <Router>
         <NavBar />
         <Switch>

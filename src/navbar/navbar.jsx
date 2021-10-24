@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-function NavBar() {
+function NavBar() { 
     return (
         <nav className="nav d-flex justify-content-around align-items-baseline bg-primary pt-3">
             <h3 className="text-white">Products</h3>

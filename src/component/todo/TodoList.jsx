@@ -3,13 +3,7 @@ const TodoList = ({ todos,deleteTodo }) => {
   const todosList =
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
-        return (
-          // <div className="row justify-content-between align-items-center">
-          //   <div className="col-6">
-             
-          //   </div>
-          // </div>
-          
+        return ( 
         <div className="col-5 text border p-2" key={i}>
           <p>Title : {todo.title}</p>
           <p>Content : {todo.content}</p>

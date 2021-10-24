@@ -1,26 +1,29 @@
-import { Field } from "formik";
+import {Field} from 'formik';
 import FormikErrorMessage from "./FormikErrorMessage";
-const FormikField = ({ name, type, label }) => {
-  return (
-    <Field name={name}>
+import React from 'react'
+
+function FormikCheckbox({name,label,type}) {
+    return (
+        <div>
+        <Field name={name}>
       {(formikField) => {
         return (
-          <div className="mb-3">
-            <label htmlFor={name} className="form-label">{label}</label>
+          <div className="mb-2 text-start ps-3">
+            <label htmlFor={name} className="form-check-label">{label}</label>
               <input
                 type={type}
                 id={name}
                 {...formikField.field}
                 defaultChecked={formikField.field.value}
-                className="form-control w-25 m-auto"
+                className="ms-3 m-auto"
               />
               <FormikErrorMessage name={name}/>
           </div>
         );
       }}
     </Field>
-    
-  );
-};
+        </div>
+    )
+}
 
-export default FormikField;
+export default FormikCheckbox

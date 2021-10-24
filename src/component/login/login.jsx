@@ -19,9 +19,9 @@ function Login() {
     });
     return (
       <form onSubmit={formik.handleSubmit}>
-      <div style={{ padding: 20 }}>
-        <div className="mb-3">
-        <label htmlFor="email" className="form-label">
+      <div className="border mt-5 py-5 w-25 m-auto bg-light">
+        <div className="mb-3 text-start ps-3">
+        <label htmlFor="email" className="form-label fs-4">
           Email
         </label>
         <input
@@ -29,14 +29,14 @@ function Login() {
           id="email"
           name="email"
           {...formik.getFieldProps("email")}
-          className="form-control w-25 m-auto"
+          className="form-control w-75 m-auto"
         />
         {formik.touched.email && formik.errors.email && (
           <div style={{ color: "red" }}>{formik.errors.email}</div>
         )}
         </div>
-        <div className="mb-3">
-        <label htmlFor="password" className="form-label">
+        <div className="mb-3 text-start ps-3">
+        <label htmlFor="password" className="form-label fs-4">
           Password
         </label>
         <input
@@ -44,15 +44,13 @@ function Login() {
           id="password"
           name="password"
           {...formik.getFieldProps("password")}
-          className="form-control w-25 m-auto"
+          className="form-control w-75 m-auto"
         />
          {formik.touched.password && formik.errors.password && (
           <div style={{ color: "red" }}>{formik.errors.password}</div>
         )}
         </div>
-       
-
-        <div className="mb-3">
+        <div className="mb-3 text-start ps-3">
           <label htmlFor="rememberMe" className="form-check-label">
             Remember Me
           </label>
@@ -64,7 +62,7 @@ function Login() {
             className="form-check-input ms-3"
           />
         </div>
-        <button className="btn btn-primary d-block m-auto mt-3">submit</button>
+        <button className="btn btn-primary d-block m-auto mt-3 fs-5">Submit</button>
       </div>
     </form>
     )
