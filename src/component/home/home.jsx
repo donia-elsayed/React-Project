@@ -19,17 +19,17 @@ function Home() {
                     <p className="text-muted">Graduated from faculty of computer and information science,Ain Shams Univeristy.</p>
                     <p className="text-muted">I student in  Front-End Track at Information Technology Institute (ITI).</p>
                     <div className="my-skills">
-                       <SiHtml5 className="fs-3"/>
-                       <SiCss3 className="fs-3"/>
-                       <SiJavascript className="fs-3"/>
-                       <FaBootstrap className="fs-3"/>
-                       <SiJquery className="fs-3"/>
-                       <SiTypescript className="fs-3"/>
-                       <SiSass className="fs-3"/>
-                       <FaAngular className="fs-3"/>
-                       <FaReact className="fs-3"/>
-                       <SiRedux className="fs-3"/>
-                       <FaGitSquare className="fs-3"/>
+                       <SiHtml5 className="fs-3 text-danger"/>
+                       <SiCss3 className="fs-3 text-primary"/>
+                       <SiJavascript className="fs-3 text-warning"/>
+                       <FaBootstrap className="fs-3" style={{color:'#7952b3'}}/>
+                       <SiJquery className="fs-3 text-primary"/>
+                       <SiTypescript className="fs-3 text-warning"/>
+                       <SiSass className="fs-3" style={{color:'#d889b1'}}/>
+                       <FaAngular className="fs-3 text-danger"/>
+                       <FaReact className="fs-3 text-info"/>
+                       <SiRedux className="fs-3 text-info"/>
+                       <FaGitSquare className="fs-3 text-danger"/>
                     </div>
                 </div>
                 <div className="col-4">
