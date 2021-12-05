@@ -11,10 +11,10 @@ function Home() {
                 <div className="col-8">
                     <h1>Donia Elsayed Abd Elsabour</h1>
                     <div className="col-3 contacts d-flex justify-content-evenly m-auto pb-4 fs-3">
-                        <a href="https://github.com/donia-elsayed"><FaGithub/></a>
+                        <a href="https://github.com/donia-elsayed"><FaGithub className="text-black"/></a>
                         <a href="https://www.linkedin.com/in/donia-elsayed/"><FaLinkedin/></a>
-                        <a href="mailto:doniaelsayed272@gmail.com"><SiGmail/></a>
-                        <a href="tel:01147001714"><FaPhoneSquareAlt/></a>
+                        <a href="mailto:doniaelsayed272@gmail.com" className="text-danger"><SiGmail/></a>
+                        <a href="tel:01147001714"><FaPhoneSquareAlt className="text-muted"/></a>
                     </div>
                     <p className="text-muted">Graduated from faculty of computer and information science,Ain Shams Univeristy.</p>
                     <p className="text-muted">I student in  Front-End Track at Information Technology Institute (ITI).</p>

@@ -8,22 +8,25 @@ import Login from './component/login/login.jsx';
 import Register from './component/register/register.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,HashRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
-        <Switch>
-          <Route path="/" component={Home} exact/>
-          <Route path="/shop" component={Shop} exact/>
-          <Route path="/counter" component={Counter} />
-          <Route path="/shop/:id" component={Product} />
-          <Route path="/todo" component={Todo} />
-          <Route path="/register" component={Register}/>
-          <Route path="/login" component={Login}/>
-        </Switch>
+        <HashRouter basename="/">
+          <NavBar />
+          <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/shop" component={Shop} exact/>
+            <Route path="/counter" component={Counter} />
+            <Route path="/shop/:id" component={Product} />
+            <Route path="/todo" component={Todo} />
+            <Route path="/register" component={Register}/>
+            <Route path="/login" component={Login}/>
+          </Switch>
+        </HashRouter>
+        
       </Router>
     </div>
   );
